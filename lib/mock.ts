@@ -41,3 +41,101 @@ export const dailyQuote =
   "On entre par cooptation, on reste par contribution.";
 
 export const openMatchingRequests = 3;
+
+export type FeedKind = "request" | "tip" | "announcement";
+
+export const feedPosts: Array<{
+  id: string;
+  author: { name: string; skill: string; founder?: boolean };
+  kind: FeedKind;
+  body: string;
+  postedAt: string;
+  replies: number;
+  helped: number;
+}> = [
+  {
+    id: "1",
+    author: { name: "Inès Moreau", skill: "Product · early-stage" },
+    kind: "request",
+    body: "Je cherche un retour structuré sur mon pricing SaaS B2B avant un board mardi. 30 min suffisent — je peux échanger contre du copywriting LP.",
+    postedAt: "il y a 2 h",
+    replies: 4,
+    helped: 2,
+  },
+  {
+    id: "2",
+    author: { name: "Marc Fournier", skill: "Investisseur", founder: true },
+    kind: "announcement",
+    body: "Petit-déjeuner fondateurs ce vendredi 8 h, café Verlet. Cinq places. RSVP en MP.",
+    postedAt: "il y a 4 h",
+    replies: 7,
+    helped: 0,
+  },
+  {
+    id: "3",
+    author: { name: "Camille Roux", skill: "Avocate fiscaliste" },
+    kind: "tip",
+    body: "Bon plan : un comptable bilingue FR/EN qui prend les holdings perso à 90 €/mois. DM si intéressé·e — pas affilié.",
+    postedAt: "il y a 6 h",
+    replies: 12,
+    helped: 5,
+  },
+  {
+    id: "4",
+    author: { name: "Léo Tanaka", skill: "Designer" },
+    kind: "request",
+    body: "Quelqu'un a déjà négocié un contrat de licence avec Adobe Stock ? Je tombe sur une clause bizarre, j'ai besoin d'un avis.",
+    postedAt: "hier",
+    replies: 2,
+    helped: 1,
+  },
+];
+
+export type ServiceMember = {
+  id: string;
+  name: string;
+  skill: string;
+  category: string;
+  score: number;
+  founder?: boolean;
+  city: string;
+};
+
+export const serviceMembers: ServiceMember[] = [
+  { id: "m1", name: "Sarah Benali", skill: "Levée de fonds Seed", category: "Finance", score: 86, city: "Paris" },
+  { id: "m2", name: "Hadrien Vérine", skill: "Recrutement tech", category: "RH", score: 78, city: "Lyon" },
+  { id: "m3", name: "Eva Chen", skill: "Growth B2B", category: "Marketing", score: 71, city: "Paris" },
+  { id: "m4", name: "Marc Fournier", skill: "Conseil board", category: "Finance", score: 92, founder: true, city: "Paris" },
+  { id: "m5", name: "Léo Tanaka", skill: "Design produit", category: "Produit", score: 68, city: "Bordeaux" },
+  { id: "m6", name: "Camille Roux", skill: "Droit fiscal", category: "Juridique", score: 81, city: "Paris" },
+];
+
+export type ConversationItem = {
+  id: string;
+  with: { name: string; skill: string; founder?: boolean };
+  preview: string;
+  at: string;
+  unread: number;
+};
+
+export const conversations: ConversationItem[] = [
+  { id: "c1", with: { name: "Inès Moreau", skill: "Product · early-stage" }, preview: "Top, je t'envoie le doc dans la soirée.", at: "12:42", unread: 2 },
+  { id: "c2", with: { name: "Marc Fournier", skill: "Investisseur", founder: true }, preview: "Vendredi 8 h ça marche pour moi.", at: "11:08", unread: 0 },
+  { id: "c3", with: { name: "Camille Roux", skill: "Avocate fiscaliste" }, preview: "Je te partage le contact en MP.", at: "Hier", unread: 0 },
+  { id: "c4", with: { name: "Sarah Benali", skill: "Levée de fonds" }, preview: "Bien reçu, je regarde demain matin.", at: "Lun", unread: 0 },
+];
+
+export type ChatMessage = {
+  id: string;
+  fromMe: boolean;
+  body: string;
+  at: string;
+};
+
+export const sampleThread: ChatMessage[] = [
+  { id: "1", fromMe: false, body: "Salut Yazid, dispo 30 min cette semaine pour parler pricing ?", at: "10:21" },
+  { id: "2", fromMe: true, body: "Avec plaisir. Mardi 15 h ?", at: "10:24" },
+  { id: "3", fromMe: false, body: "Parfait, je t'envoie un Meet. Tu peux jeter un œil au deck avant ?", at: "10:25" },
+  { id: "4", fromMe: true, body: "Oui, envoie. Je te fais un retour structuré avant la session.", at: "10:27" },
+  { id: "5", fromMe: false, body: "Top, je t'envoie le doc dans la soirée.", at: "12:42" },
+];
