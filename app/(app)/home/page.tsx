@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   ChevronRight,
   HelpCircle,
@@ -8,6 +9,7 @@ import {
   Calendar,
   UserPlus,
   ArrowRight,
+  Hash,
 } from "lucide-react";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
@@ -159,6 +161,23 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Canal entry */}
+      <Link
+        href="/canal"
+        className="mb-6 flex items-center gap-3 rounded-md border border-border bg-surface p-4 transition-colors duration-180 hover:bg-bg-grouped"
+      >
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-accent">
+          <Hash className="h-5 w-5" strokeWidth={1.5} />
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className="text-headline text-text-primary">Le canal</p>
+          <p className="text-footnote text-text-tertiary">
+            48 membres en ligne · 12 nouveaux messages
+          </p>
+        </div>
+        <ChevronRight className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
+      </Link>
 
       {/* Daily quote */}
       <section className="py-9 text-center">

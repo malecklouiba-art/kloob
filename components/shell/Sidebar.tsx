@@ -11,6 +11,7 @@ import {
   Award,
   BookOpen,
   Calendar,
+  Hash,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
@@ -24,6 +25,7 @@ const primary = [
 ];
 
 const secondary = [
+  { href: "/canal", label: "Canal", icon: Hash },
   { href: "/score", label: "Score & badges", icon: Award },
   { href: "/charter", label: "Charte", icon: BookOpen },
   { href: "/events", label: "Événements", icon: Calendar },

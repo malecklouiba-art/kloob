@@ -132,6 +132,85 @@ export type ChatMessage = {
   at: string;
 };
 
+export const profile = {
+  fullName: "Yazid Belkadi",
+  city: "Paris",
+  joinedAt: "Mars 2026",
+  founder: true,
+  bio:
+    "Co-fondateur d'une boîte EdTech, ex-Stripe. J'aide volontiers sur le pricing, le go-to-market B2B et les premières embauches.",
+  offered: ["Pricing SaaS", "GTM B2B", "Recrutement early-stage", "Pitch deck"],
+  wanted: ["Levée Series A", "Droit du travail US"],
+  trimesterScore: 72,
+  lifetimeContributions: 38,
+  badges: [
+    { key: "founder", label: "Fondateur" },
+    { key: "top10-q1", label: "Top 10 · Q1" },
+    { key: "gold-referrer", label: "Parrain d'or" },
+  ],
+};
+
+export type ChannelMsg = {
+  id: string;
+  author: { name: string; founder?: boolean };
+  body: string;
+  at: string;
+  reactions?: Array<{ emoji: string; count: number }>;
+  threadCount?: number;
+  pinned?: boolean;
+};
+
+export const channelSections = [
+  { key: "entraide", label: "Entraide" },
+  { key: "bons-plans", label: "Bons plans" },
+  { key: "evenements", label: "Événements" },
+  { key: "presentation", label: "Présentation" },
+] as const;
+
+export const channelMessages: ChannelMsg[] = [
+  {
+    id: "p1",
+    author: { name: "Comité Kloob" },
+    body:
+      "Rappel : la prochaine assemblée trimestrielle se tient le 12 juin. Ordre du jour publié dimanche.",
+    at: "9:02",
+    pinned: true,
+  },
+  {
+    id: "1",
+    author: { name: "Inès Moreau" },
+    body:
+      "Quelqu'un a un retour récent sur Notion AI vs Linear pour la gestion de roadmap produit ? Je penche Linear mais hésite encore.",
+    at: "10:14",
+    reactions: [{ emoji: "👍", count: 3 }, { emoji: "🤔", count: 1 }],
+    threadCount: 5,
+  },
+  {
+    id: "2",
+    author: { name: "Marc Fournier", founder: true },
+    body: "Linear sans hésiter pour la roadmap, Notion pour la doc à côté. J'expliquerai en thread.",
+    at: "10:18",
+    threadCount: 0,
+  },
+  {
+    id: "3",
+    author: { name: "Camille Roux" },
+    body:
+      "Pour celles et ceux qui font du SaaS B2B en Europe : la nouvelle directive omnibus simplifie pas mal de reporting RGPD. Je peux faire un récap si ça intéresse.",
+    at: "11:46",
+    reactions: [{ emoji: "🙌", count: 7 }],
+    threadCount: 2,
+  },
+  {
+    id: "4",
+    author: { name: "Léo Tanaka" },
+    body:
+      "Je cherche un·e illustrateur·ice freelance pour 2 jours sur un onboarding mobile. Recommandations bienvenues.",
+    at: "13:09",
+    threadCount: 1,
+  },
+];
+
 export const sampleThread: ChatMessage[] = [
   { id: "1", fromMe: false, body: "Salut Yazid, dispo 30 min cette semaine pour parler pricing ?", at: "10:21" },
   { id: "2", fromMe: true, body: "Avec plaisir. Mardi 15 h ?", at: "10:24" },
