@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-elevated: #FBFBFD;
+  --bg-grouped: #F2F2F5;
+  --surface: #FFFFFF;
+  --border: #E5E5EA;
+  --text-primary: #0A0A0C;
+  --text-secondary: #6E6E73;
+  --text-tertiary: #A1A1A6;
+  --accent: #0A1F44;
+  --accent-on: #FFFFFF;
+  --gold: #C9A961;
+  --success: #34C759;
+  --warning: #FF9F0A;
+  --danger: #FF3B30;
+}
+
+.dark {
+  --bg-primary: #0A0A0C;
+  --bg-elevated: #151518;
+  --bg-grouped: #1C1C1F;
+  --surface: #1F1F23;
+  --border: #2C2C2E;
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1A6;
+  --text-tertiary: #6E6E73;
+  --accent: #5B7BD6;
+  --accent-on: #0A1F44;
+  --gold: #D4B872;
+  --success: #30D158;
+  --warning: #FF9F0A;
+  --danger: #FF453A;
+}
+
+html,
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:
+    "SF Pro Text",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Inter",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+.glass {
+  background: color-mix(in srgb, var(--bg-primary) 72%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
