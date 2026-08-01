@@ -2,53 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-primary: #FFFFFF;
-  --bg-elevated: #FBFBFD;
-  --bg-grouped: #F2F2F5;
-  --surface: #FFFFFF;
-  --border: #E5E5EA;
-  --text-primary: #0A0A0C;
-  --text-secondary: #6E6E73;
-  --text-tertiary: #A1A1A6;
-  --accent: #0A1F44;
-  --accent-on: #FFFFFF;
-  --gold: #C9A961;
-  --success: #34C759;
-  --warning: #FF9F0A;
-  --danger: #FF3B30;
-}
-
-.dark {
-  --bg-primary: #0A0A0C;
-  --bg-elevated: #151518;
-  --bg-grouped: #1C1C1F;
-  --surface: #1F1F23;
-  --border: #2C2C2E;
-  --text-primary: #F5F5F7;
-  --text-secondary: #A1A1A6;
-  --text-tertiary: #6E6E73;
-  --accent: #5B7BD6;
-  --accent-on: #0A1F44;
-  --gold: #D4B872;
-  --success: #30D158;
-  --warning: #FF9F0A;
-  --danger: #FF453A;
-}
-
 html,
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: theme("colors.ink.900");
+  color: theme("colors.bone.DEFAULT");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family:
-    "SF Pro Text",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Inter",
-    "Helvetica Neue",
-    sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -56,13 +16,27 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent) 24%, transparent);
+  background: rgba(216, 161, 59, 0.3);
+  color: #f3f1ea;
 }
 
-.glass {
-  background: color-mix(in srgb, var(--bg-primary) 72%, transparent);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+/* Focus visible net et cohérent pour l'accessibilité clavier */
+:focus-visible {
+  outline: 2px solid theme("colors.amber.DEFAULT");
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-elvez {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
 }
 
 .scrollbar-none::-webkit-scrollbar {
@@ -70,4 +44,12 @@ body {
 }
 .scrollbar-none {
   scrollbar-width: none;
+}
+
+/* Glass premium pour nav / cartes flottantes */
+.glass-panel {
+  background: rgba(17, 19, 24, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }

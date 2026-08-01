@@ -1,13 +1,14 @@
-# Kloob — Web (v0.1)
+# Elvez — Site vitrine
 
-Frontend Next.js 14 du cercle privé d'entraide Kloob. Design system Apple-grade : SF Pro, navy `#0A1F44`, gold de statut `#C9A961`, dark mode dès la v1.
+Site vitrine de la société de sécurité privée Elvez, agréée CNAPS, intervenant dans les Bouches-du-Rhône
+(BTP & chantiers, événementiel, gardiennage tertiaire).
 
 ## Stack
 
 - Next.js 14 (App Router) · TypeScript
-- Tailwind CSS avec tokens (couleurs, typo, espacements, rayons, élévations)
-- Framer Motion (springs)
-- Lucide (icônes, stroke 1.5 px — proche de SF Symbols)
+- Tailwind CSS avec design tokens dédiés (palette sombre + accent ambre)
+- Framer Motion (micro-interactions au scroll)
+- Lucide (icônes)
 
 ## Setup
 
@@ -16,43 +17,45 @@ npm install
 npm run dev
 ```
 
-Ouvre <http://localhost:3000> — redirige vers `/home`.
+Ouvre <http://localhost:3000>.
 
-## Routes livrées
+> Sur cet environnement, le fetch des polices Google (`next/font/google`) au build passe par le proxy
+> réseau : lancer `NODE_USE_ENV_PROXY=1 npm run build` si le build ne récupère pas les polices.
 
-| Route        | État                                                   |
-| ------------ | ------------------------------------------------------ |
-| `/home`      | Accueil — score, demande du jour, rituel, top contributeurs, citation |
-| `/join`      | Souscription — hero navy, pricing card, sheet paiement |
-| `/charter`   | Placeholder (en attente de `kloob_club.md`)            |
-| `/feed`, `/services`, `/messages`, `/profile`, `/score`, `/events` | À venir (cf. brief §4) |
+## Pages
+
+| Route                       | Contenu                                              |
+| ---------------------------- | ----------------------------------------------------- |
+| `/`                          | Accueil — hero, réassurance, secteurs, chiffres clés, témoignages, devis rapide |
+| `/services/btp-chantiers`    | Secteur BTP & chantiers                              |
+| `/services/evenementiel`     | Secteur événementiel                                 |
+| `/services/gardiennage`      | Sécurité privée & gardiennage                        |
+| `/a-propos`                  | Histoire, valeurs, encadrement, conformité Livre VI  |
+| `/contact`                   | Formulaire de devis, coordonnées, zone d'intervention |
+| `/mentions-legales`          | Mentions légales                                     |
 
 ## Design tokens
 
-Définis dans `tailwind.config.ts` + variables CSS dans `app/globals.css`. Toggle clair/sombre via `ThemeToggle` (persisté en localStorage).
+Définis dans `tailwind.config.ts` (couleurs `ink`/`bone`/`amber`, typographies `display`/`body`, échelle de
+titres `hero`/`display-1..3`) et dans `app/globals.css` (utilitaires `container-elvez`, `glass-panel`, `bg-noise`).
 
 ## Composants
 
-- `components/ui/` : `Avatar`, `Button`, `Badge`, `Card`, `ScoreGauge`, `Sheet`
-- `components/shell/` : `Sidebar` (web ≥1024 px), `TabBar` (mobile), `ThemeToggle`
+- `components/Hero.tsx`, `components/layout/PageHero.tsx` — bannières
+- `components/ServiceCard.tsx`, `components/TrustBadge.tsx`, `components/UseCaseCard.tsx`
+- `components/TestimonialCarousel.tsx`, `components/StatsCounter.tsx`
+- `components/QuoteForm.tsx` — formulaire de devis pré-qualifié par type de prestation
+- `components/StickyCTA.tsx` — CTA unique "Urgence 24/7" flottant
+- `components/layout/Navbar.tsx`, `components/layout/Footer.tsx`
+- `components/Reveal.tsx` — wrapper d'apparition au scroll (Framer Motion)
 
-## Structure
+## Contenu
 
-```
-app/
-  layout.tsx              # html + dark mode bootstrap
-  page.tsx                # → redirect /home
-  (app)/
-    layout.tsx            # Sidebar + TabBar
-    home/page.tsx
-    charter/page.tsx
-  join/page.tsx           # hors shell (parcours d'adhésion)
-components/
-lib/
-  utils.ts                # cn, initials, pastel
-  mock.ts                 # données de démo
-```
+Toutes les données (services, témoignages, villes desservies, chiffres clés, coordonnées) sont centralisées
+dans `lib/data.ts`. Le numéro d'agrément CNAPS et les coordonnées sont des placeholders à remplacer par les
+informations réelles de l'entreprise avant mise en production.
 
-## Hors scope v0.1
+## Hors scope v1
 
-Mobile natif (Swift / Compose), backend, auth, Stripe réel, realtime — cf. brief §11.
+Backend/CRM pour le formulaire de devis (actuellement simulé côté client), photographies réelles (remplacées
+par des dégradés/motifs géométriques), intégration carte interactive tierce.
