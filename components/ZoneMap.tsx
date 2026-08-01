@@ -23,8 +23,8 @@ export function ZoneMap() {
       <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" aria-hidden="true">
         <path
           d="M6,22 L20,12 L38,10 L52,18 L58,14 L74,20 L82,32 L78,48 L84,58 L76,72 L62,80 L48,86 L34,78 L24,66 L14,58 L8,44 Z"
-          fill="rgba(216,161,59,0.06)"
-          stroke="rgba(216,161,59,0.35)"
+          fill="rgba(76,134,245,0.06)"
+          stroke="rgba(76,134,245,0.35)"
           strokeWidth="0.5"
         />
       </svg>
@@ -42,14 +42,14 @@ export function ZoneMap() {
           <div className="flex flex-col items-center">
             <span
               className={`whitespace-nowrap rounded-xs px-2 py-1 text-[11px] font-medium opacity-0 transition-opacity duration-200 group-hover:opacity-100 ${
-                m.primary ? "bg-amber text-ink-950" : "glass-panel text-bone"
+                m.primary ? "bg-accent text-ink-950" : "glass-panel text-bone"
               }`}
             >
               {m.city}
             </span>
             <MapPin
               size={m.primary ? 26 : 18}
-              className={m.primary ? "text-amber drop-shadow-[0_0_8px_rgba(216,161,59,0.6)]" : "text-bone-muted"}
+              className={m.primary ? "text-accent drop-shadow-[0_0_8px_rgba(76,134,245,0.6)]" : "text-bone-muted"}
               fill={m.primary ? "currentColor" : "none"}
               aria-label={m.city}
             />

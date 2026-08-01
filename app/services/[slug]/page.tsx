@@ -49,12 +49,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="py-20 sm:py-28">
         <div className="container-elvez grid grid-cols-1 gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Ce que couvre la prestation</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Ce que couvre la prestation</p>
             <h2 className="mt-4 font-display text-display-2 text-bone">Notre dispositif « {service.title} »</h2>
             <ul className="mt-8 space-y-4">
               {service.bullets.map((b) => (
                 <li key={b} className="flex items-start gap-3">
-                  <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-amber" aria-hidden="true" />
+                  <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />
                   <span className="text-[15px] leading-relaxed text-bone-muted">{b}</span>
                 </li>
               ))}
@@ -65,7 +65,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             <div className="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-ink-700 via-ink-800 to-ink-950 p-1">
               <div className="relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-md bg-grid-pattern bg-grid p-8">
                 <div className="absolute inset-0 bg-radial-fade" aria-hidden="true" />
-                <service.icon size={48} strokeWidth={1.25} className="relative mb-4 text-amber" aria-hidden="true" />
+                <service.icon size={48} strokeWidth={1.25} className="relative mb-4 text-accent" aria-hidden="true" />
                 <p className="relative font-display text-2xl font-bold text-bone">{service.title}</p>
                 <p className="relative mt-2 text-sm text-bone-muted">
                   Intervention sur l'ensemble des Bouches-du-Rhône, agents cartes professionnelles CQP APS.
@@ -79,7 +79,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="border-t border-white/10 bg-ink-800/40 py-20 sm:py-28">
         <div className="container-elvez">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Sur le terrain</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Sur le terrain</p>
             <h2 className="mt-4 max-w-2xl text-balance font-display text-display-2 text-bone">
               Cas d'usage dans les Bouches-du-Rhône
             </h2>
@@ -97,7 +97,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="border-t border-white/10 py-20 sm:py-28">
         <div className="container-elvez">
           <Reveal className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Autres secteurs</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Autres secteurs</p>
             <h2 className="mt-4 font-display text-display-2 text-bone">Explorer nos autres services</h2>
           </Reveal>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -105,15 +105,15 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group flex flex-1 items-center justify-between gap-4 rounded-md border border-white/10 bg-ink-800 px-6 py-5 transition-colors duration-200 hover:border-amber/40"
+                className="group flex flex-1 items-center justify-between gap-4 rounded-md border border-white/10 bg-ink-800 px-6 py-5 transition-colors duration-200 hover:border-accent/40"
               >
                 <div className="flex items-center gap-3">
-                  <s.icon size={22} className="text-amber" aria-hidden="true" />
+                  <s.icon size={22} className="text-accent" aria-hidden="true" />
                   <span className="font-semibold text-bone">{s.title}</span>
                 </div>
                 <ArrowRight
                   size={18}
-                  className="text-bone-faint transition-transform duration-200 group-hover:translate-x-1 group-hover:text-amber"
+                  className="text-bone-faint transition-transform duration-200 group-hover:translate-x-1 group-hover:text-accent"
                   aria-hidden="true"
                 />
               </Link>
@@ -126,7 +126,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         <div className="container-elvez">
           <div className="mx-auto max-w-2xl">
             <Reveal className="text-center">
-              <p className="text-xs font-semibold uppercase tracking-wider text-amber">Devis {service.title}</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-accent">Devis {service.title}</p>
               <h2 className="mt-4 font-display text-display-2 text-bone">Obtenez votre proposition chiffrée</h2>
               <p className="mt-4 text-bone-muted">Réponse sous 24h ouvrées, sans engagement.</p>
             </Reveal>

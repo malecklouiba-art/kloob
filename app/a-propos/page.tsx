@@ -69,7 +69,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="container-elvez grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Notre histoire</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Notre histoire</p>
             <h2 className="mt-4 font-display text-display-2 text-bone">Née sur le terrain, restée sur le terrain</h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-bone-muted">
               <p>
@@ -91,11 +91,11 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Nos valeurs</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Nos valeurs</p>
             <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
               {values.map((v) => (
                 <div key={v.title} className="rounded-md border border-white/10 bg-ink-800 p-5">
-                  <v.icon size={22} className="text-amber" strokeWidth={1.75} aria-hidden="true" />
+                  <v.icon size={22} className="text-accent" strokeWidth={1.75} aria-hidden="true" />
                   <p className="mt-3 font-display text-base font-bold text-bone">{v.title}</p>
                   <p className="mt-1.5 text-sm leading-relaxed text-bone-muted">{v.description}</p>
                 </div>
@@ -117,8 +117,8 @@ export default function AboutPage() {
         <div className="container-elvez">
           <Reveal>
             <div className="flex items-center gap-3">
-              <GraduationCap size={22} className="text-amber" aria-hidden="true" />
-              <p className="text-xs font-semibold uppercase tracking-wider text-amber">Équipe & encadrement</p>
+              <GraduationCap size={22} className="text-accent" aria-hidden="true" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-accent">Équipe & encadrement</p>
             </div>
             <h2 className="mt-4 max-w-2xl text-balance font-display text-display-2 text-bone">
               Des agents formés, un encadrement présent
@@ -137,8 +137,8 @@ export default function AboutPage() {
         <div className="container-elvez">
           <Reveal>
             <div className="flex items-center gap-3">
-              <ScrollText size={22} className="text-amber" aria-hidden="true" />
-              <p className="text-xs font-semibold uppercase tracking-wider text-amber">Qualité & conformité</p>
+              <ScrollText size={22} className="text-accent" aria-hidden="true" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-accent">Qualité & conformité</p>
             </div>
             <h2 className="mt-4 max-w-2xl text-balance font-display text-display-2 text-bone">
               Nos engagements réglementaires
@@ -155,9 +155,9 @@ export default function AboutPage() {
             ))}
           </div>
           <Reveal delay={0.2} className="mt-10">
-            <div className="rounded-md border border-amber/25 bg-amber/5 px-6 py-5">
+            <div className="rounded-md border border-accent/25 bg-accent/5 px-6 py-5">
               <p className="text-sm text-bone-muted">
-                <span className="font-semibold text-amber">Autorisation d'exercice CNAPS n° {CNAPS_NUMBER}.</span>{" "}
+                <span className="font-semibold text-accent">Autorisation d'exercice CNAPS n° {CNAPS_NUMBER}.</span>{" "}
                 Elvez exerce ses activités de sécurité privée conformément aux dispositions du Livre VI du Code de
                 la sécurité intérieure.
               </p>

@@ -35,8 +35,8 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
 
   if (status === "success") {
     return (
-      <div className={cn("flex flex-col items-center gap-3 rounded-md border border-amber/30 bg-amber/5 px-6 py-12 text-center", className)}>
-        <CheckCircle2 size={40} className="text-amber" aria-hidden="true" />
+      <div className={cn("flex flex-col items-center gap-3 rounded-md border border-accent/30 bg-accent/5 px-6 py-12 text-center", className)}>
+        <CheckCircle2 size={40} className="text-accent" aria-hidden="true" />
         <p className="font-display text-xl font-bold text-bone">Demande envoyée</p>
         <p className="max-w-sm text-sm text-bone-muted">
           Un conseiller Elvez vous recontacte sous 24h ouvrées. Pour une urgence, appelez directement notre astreinte.
@@ -49,7 +49,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <fieldset>
         <legend className="mb-3 text-sm font-semibold text-bone">
-          Type de prestation <span className="text-amber">*</span>
+          Type de prestation <span className="text-accent">*</span>
         </legend>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {serviceOptions.map(({ value, label, icon: Icon }) => {
@@ -60,7 +60,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
                 className={cn(
                   "flex cursor-pointer items-center gap-3 rounded-sm border px-4 py-3.5 transition-all duration-200",
                   active
-                    ? "border-amber bg-amber/10 text-bone"
+                    ? "border-accent bg-accent/10 text-bone"
                     : "border-white/10 bg-white/[0.02] text-bone-muted hover:border-white/25"
                 )}
               >
@@ -73,7 +73,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
                   className="sr-only"
                   required
                 />
-                <Icon size={20} className={active ? "text-amber" : "text-bone-faint"} aria-hidden="true" />
+                <Icon size={20} className={active ? "text-accent" : "text-bone-faint"} aria-hidden="true" />
                 <span className="text-sm font-medium">{label}</span>
               </label>
             );
@@ -84,27 +84,27 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
       <div className={cn("grid gap-5", compact ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2")}>
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-bone">
-            Nom / société <span className="text-amber">*</span>
+            Nom / société <span className="text-accent">*</span>
           </label>
           <input
             id="name"
             name="name"
             type="text"
             required
-            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-amber/60 focus:bg-white/[0.04] focus:outline-none"
+            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-accent/60 focus:bg-white/[0.04] focus:outline-none"
             placeholder="Votre nom ou raison sociale"
           />
         </div>
         <div>
           <label htmlFor="phone" className="mb-1.5 block text-sm font-semibold text-bone">
-            Téléphone <span className="text-amber">*</span>
+            Téléphone <span className="text-accent">*</span>
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
             required
-            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-amber/60 focus:bg-white/[0.04] focus:outline-none"
+            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-accent/60 focus:bg-white/[0.04] focus:outline-none"
             placeholder="06 00 00 00 00"
           />
         </div>
@@ -116,7 +116,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
             id="dates"
             name="dates"
             type="text"
-            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-amber/60 focus:bg-white/[0.04] focus:outline-none"
+            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-accent/60 focus:bg-white/[0.04] focus:outline-none"
             placeholder="Ex : à partir du 15/09"
           />
         </div>
@@ -128,7 +128,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
             id="location"
             name="location"
             type="text"
-            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-amber/60 focus:bg-white/[0.04] focus:outline-none"
+            className="w-full rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-accent/60 focus:bg-white/[0.04] focus:outline-none"
             placeholder="Ville, Bouches-du-Rhône"
           />
         </div>
@@ -142,7 +142,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
           id="message"
           name="message"
           rows={compact ? 2 : 4}
-          className="w-full resize-none rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-amber/60 focus:bg-white/[0.04] focus:outline-none"
+          className="w-full resize-none rounded-sm border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-bone placeholder:text-bone-faint focus:border-accent/60 focus:bg-white/[0.04] focus:outline-none"
           placeholder="Décrivez brièvement votre besoin (nombre d'agents, contexte, contraintes...)"
         />
       </div>
@@ -150,7 +150,7 @@ export function QuoteForm({ compact = false, defaultService, className }: QuoteF
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-amber px-6 py-3.5 text-sm font-semibold text-ink-950 shadow-amber-glow transition-all duration-200 ease-sharp hover:bg-amber-400 disabled:opacity-70 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-semibold text-ink-950 shadow-accent-glow transition-all duration-200 ease-sharp hover:bg-accent-400 disabled:opacity-70 sm:w-auto"
       >
         {status === "submitting" ? (
           <>

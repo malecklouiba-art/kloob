@@ -29,19 +29,19 @@ export function ServiceCard({ slug, icon, title, tagline, description, index = 0
     >
       <Link
         href={`/services/${slug}`}
-        className="group relative flex h-full flex-col overflow-hidden rounded-md border border-white/10 bg-ink-800 p-7 transition-all duration-300 ease-sharp hover:-translate-y-1.5 hover:border-amber/40 hover:shadow-elev-3"
+        className="group relative flex h-full flex-col overflow-hidden rounded-md border border-white/10 bg-ink-800 p-7 transition-all duration-300 ease-sharp hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-elev-3"
       >
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-radial-fade opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         />
         <div className="relative flex items-center justify-between">
-          <span className="flex h-14 w-14 items-center justify-center rounded-sm bg-amber/10 text-amber transition-colors duration-300 group-hover:bg-amber group-hover:text-ink-950">
+          <span className="flex h-14 w-14 items-center justify-center rounded-sm bg-accent/10 text-accent transition-colors duration-300 group-hover:bg-accent group-hover:text-ink-950">
             {icon}
           </span>
           <ArrowUpRight
             size={22}
-            className="text-bone-faint transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-amber"
+            className="text-bone-faint transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
             aria-hidden="true"
           />
         </div>
@@ -49,11 +49,11 @@ export function ServiceCard({ slug, icon, title, tagline, description, index = 0
         <h3 className="relative mt-6 font-display text-2xl font-bold tracking-tight text-bone">
           {title}
         </h3>
-        <p className="relative mt-1 text-sm font-medium text-amber">{tagline}</p>
+        <p className="relative mt-1 text-sm font-medium text-accent">{tagline}</p>
         <p className="relative mt-4 flex-1 text-[15px] leading-relaxed text-bone-muted">
           {description}
         </p>
-        <span className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-bone underline decoration-amber/40 decoration-2 underline-offset-4 group-hover:text-amber">
+        <span className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-bone underline decoration-accent/40 decoration-2 underline-offset-4 group-hover:text-accent">
           Découvrir le service
         </span>
       </Link>

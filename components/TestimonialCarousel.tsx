@@ -32,7 +32,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
         <Quote
           size={64}
           strokeWidth={1}
-          className="absolute -left-2 -top-2 text-amber/10 sm:left-4 sm:top-4"
+          className="absolute -left-2 -top-2 text-accent/10 sm:left-4 sm:top-4"
           aria-hidden="true"
         />
         <AnimatePresence mode="wait" custom={direction}>
@@ -49,7 +49,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
               « {current.quote} »
             </p>
             <div className="mt-6">
-              <p className="text-sm font-semibold text-amber">{current.name}</p>
+              <p className="text-sm font-semibold text-accent">{current.name}</p>
               <p className="text-sm text-bone-muted">{current.role}</p>
             </div>
           </motion.div>
@@ -66,7 +66,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
               aria-label={`Témoignage de ${t.name}`}
               onClick={() => go(i)}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === index ? "w-8 bg-amber" : "w-1.5 bg-white/15 hover:bg-white/30"
+                i === index ? "w-8 bg-accent" : "w-1.5 bg-white/15 hover:bg-white/30"
               }`}
             />
           ))}
@@ -75,14 +75,14 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
           <button
             onClick={() => go(index - 1)}
             aria-label="Témoignage précédent"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bone transition-colors duration-200 hover:border-amber/50 hover:text-amber"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bone transition-colors duration-200 hover:border-accent/50 hover:text-accent"
           >
             <ChevronLeft size={18} aria-hidden="true" />
           </button>
           <button
             onClick={() => go(index + 1)}
             aria-label="Témoignage suivant"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bone transition-colors duration-200 hover:border-amber/50 hover:text-amber"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bone transition-colors duration-200 hover:border-accent/50 hover:text-accent"
           >
             <ChevronRight size={18} aria-hidden="true" />
           </button>

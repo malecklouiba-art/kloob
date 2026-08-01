@@ -27,7 +27,7 @@ export default function HomePage() {
       <section className="py-24 sm:py-30" id="secteurs">
         <div className="container-elvez">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Nos secteurs d'activité</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Nos secteurs d'activité</p>
             <h2 className="mt-4 max-w-2xl text-balance font-display text-display-1 text-bone">
               Un dispositif adapté à chaque terrain
             </h2>
@@ -52,7 +52,7 @@ export default function HomePage() {
       <section className="border-t border-white/10 bg-ink-800/40 py-24 sm:py-30">
         <div className="container-elvez">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Pourquoi choisir Elvez</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Pourquoi choisir Elvez</p>
             <h2 className="mt-4 max-w-2xl text-balance font-display text-display-1 text-bone">
               La sécurité prise au sérieux, sans discours
             </h2>
@@ -61,7 +61,7 @@ export default function HomePage() {
             {whyElvez.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.08}>
                 <div className="flex h-full flex-col">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-sm bg-amber/10 text-amber">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-sm bg-accent/10 text-accent">
                     <item.icon size={22} strokeWidth={1.75} aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 font-display text-lg font-bold text-bone">{item.title}</h3>
@@ -77,7 +77,7 @@ export default function HomePage() {
       <section className="border-t border-white/10 py-24 sm:py-30">
         <div className="container-elvez">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Elvez en chiffres</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Elvez en chiffres</p>
             <h2 className="mt-4 max-w-2xl text-balance font-display text-display-1 text-bone">
               Un acteur établi dans les Bouches-du-Rhône
             </h2>
@@ -92,7 +92,7 @@ export default function HomePage() {
       <section className="border-t border-white/10 bg-ink-800/40 py-24 sm:py-30">
         <div className="container-elvez">
           <Reveal className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Ils nous font confiance</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Ils nous font confiance</p>
             <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-display-1 text-bone">
               Ce qu'en disent nos clients
             </h2>
@@ -107,7 +107,7 @@ export default function HomePage() {
       <section className="border-t border-white/10 py-24 sm:py-30" id="devis">
         <div className="container-elvez grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-amber">Demande de devis</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent">Demande de devis</p>
             <h2 className="mt-4 text-balance font-display text-display-1 text-bone">
               Un dispositif de sécurité en moins de 24h
             </h2>

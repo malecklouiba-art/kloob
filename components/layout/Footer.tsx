@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-bone">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xs bg-amber text-ink-950">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xs bg-accent text-ink-950">
                 <ShieldCheck size={20} strokeWidth={2} aria-hidden="true" />
               </span>
               Elvez
@@ -28,7 +28,7 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-bone-muted transition-colors duration-200 hover:border-amber/40 hover:text-amber"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-bone-muted transition-colors duration-200 hover:border-accent/40 hover:text-accent"
                 >
                   <Icon size={16} aria-hidden="true" />
                 </Link>
@@ -41,7 +41,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {navServices.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services/${s.slug}`} className="text-sm text-bone-muted transition-colors duration-200 hover:text-amber">
+                  <Link href={`/services/${s.slug}`} className="text-sm text-bone-muted transition-colors duration-200 hover:text-accent">
                     {s.title}
                   </Link>
                 </li>
@@ -53,17 +53,17 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-wider text-bone-faint">Entreprise</p>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="/a-propos" className="text-sm text-bone-muted transition-colors duration-200 hover:text-amber">
+                <Link href="/a-propos" className="text-sm text-bone-muted transition-colors duration-200 hover:text-accent">
                   À propos
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-bone-muted transition-colors duration-200 hover:text-amber">
+                <Link href="/contact" className="text-sm text-bone-muted transition-colors duration-200 hover:text-accent">
                   Contact &amp; devis
                 </Link>
               </li>
               <li>
-                <Link href="/mentions-legales" className="text-sm text-bone-muted transition-colors duration-200 hover:text-amber">
+                <Link href="/mentions-legales" className="text-sm text-bone-muted transition-colors duration-200 hover:text-accent">
                   Mentions légales
                 </Link>
               </li>
@@ -74,18 +74,18 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-wider text-bone-faint">Contact</p>
             <ul className="mt-4 space-y-3 text-sm text-bone-muted">
               <li className="flex items-start gap-2.5">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-amber" aria-hidden="true" />
+                <MapPin size={16} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />
                 {ADDRESS}
               </li>
               <li className="flex items-center gap-2.5">
-                <PhoneCall size={16} className="shrink-0 text-amber" aria-hidden="true" />
-                <Link href={`tel:${PHONE_STANDARD.replace(/\s/g, "")}`} className="hover:text-amber">
+                <PhoneCall size={16} className="shrink-0 text-accent" aria-hidden="true" />
+                <Link href={`tel:${PHONE_STANDARD.replace(/\s/g, "")}`} className="hover:text-accent">
                   {PHONE_STANDARD}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail size={16} className="shrink-0 text-amber" aria-hidden="true" />
-                <Link href={`mailto:${EMAIL_CONTACT}`} className="hover:text-amber">
+                <Mail size={16} className="shrink-0 text-accent" aria-hidden="true" />
+                <Link href={`mailto:${EMAIL_CONTACT}`} className="hover:text-accent">
                   {EMAIL_CONTACT}
                 </Link>
               </li>

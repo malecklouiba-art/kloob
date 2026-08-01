@@ -27,20 +27,22 @@ const config: Config = {
           muted: "#B9B7B0",
           faint: "#7C7A75",
         },
-        // Accent unique : or/ambre sécurité
-        amber: {
-          DEFAULT: "#D8A13B",
-          50: "#FBF3E3",
-          100: "#F5E4C0",
-          200: "#EFD59C",
-          300: "#E9C679",
-          400: "#E2B655",
-          500: "#D8A13B",
-          600: "#B9852B",
-          700: "#8F6621",
-          800: "#654818",
-          900: "#3B2A0E",
-          glow: "rgba(216, 161, 59, 0.35)",
+        // Accent unique : bleu nuit électrique sécurité
+        // Luminosité calibrée pour rester en contraste AA à la fois en texte sur fond
+        // sombre (labels) et en texte foncé sur bouton (cf. components/Button.tsx)
+        accent: {
+          DEFAULT: "#4C86F5",
+          50: "#EFF4FF",
+          100: "#D7E5FF",
+          200: "#AFCBFF",
+          300: "#85AEFF",
+          400: "#6899FA",
+          500: "#4C86F5",
+          600: "#3868D1",
+          700: "#294FA3",
+          800: "#1C3874",
+          900: "#11234A",
+          glow: "rgba(76, 134, 245, 0.35)",
         },
       },
       fontFamily: {
@@ -69,13 +71,13 @@ const config: Config = {
         "elev-1": "0 1px 2px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04)",
         "elev-2": "0 8px 24px rgba(0,0,0,0.35)",
         "elev-3": "0 24px 64px rgba(0,0,0,0.5)",
-        "amber-glow": "0 0 0 1px rgba(216,161,59,0.4), 0 8px 32px rgba(216,161,59,0.18)",
+        "accent-glow": "0 0 0 1px rgba(76,134,245,0.4), 0 8px 32px rgba(76,134,245,0.18)",
       },
       backgroundImage: {
         "grid-pattern":
           "linear-gradient(rgba(243,241,234,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(243,241,234,0.04) 1px, transparent 1px)",
         "radial-fade":
-          "radial-gradient(circle at 50% 0%, rgba(216,161,59,0.14), transparent 60%)",
+          "radial-gradient(circle at 50% 0%, rgba(76,134,245,0.14), transparent 60%)",
       },
       backgroundSize: {
         grid: "48px 48px",

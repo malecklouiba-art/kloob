@@ -38,8 +38,8 @@ export default function ContactPage() {
         <div className="container-elvez grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="space-y-10">
             <Reveal>
-              <div className="rounded-md border border-amber/30 bg-amber/5 p-6">
-                <div className="flex items-center gap-2 text-amber">
+              <div className="rounded-md border border-accent/30 bg-accent/5 p-6">
+                <div className="flex items-center gap-2 text-accent">
                   <Clock size={18} aria-hidden="true" />
                   <p className="text-sm font-semibold">Urgence — intervention immédiate</p>
                 </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href={`tel:${PHONE_EMERGENCY.replace(/\s/g, "")}`}
-                  className="mt-4 inline-flex items-center gap-2 rounded-sm bg-amber px-5 py-3 text-sm font-semibold text-ink-950 shadow-amber-glow transition-all duration-200 hover:bg-amber-400"
+                  className="mt-4 inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-3 text-sm font-semibold text-ink-950 shadow-accent-glow transition-all duration-200 hover:bg-accent-400"
                 >
                   <PhoneCall size={16} aria-hidden="true" />
                   {PHONE_EMERGENCY}
@@ -60,13 +60,13 @@ export default function ContactPage() {
               <ul className="space-y-4">
                 {contactPoints.map((c) => (
                   <li key={c.label} className="flex items-start gap-3 rounded-md border border-white/10 bg-ink-800 p-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xs bg-amber/10 text-amber">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xs bg-accent/10 text-accent">
                       <c.icon size={18} aria-hidden="true" />
                     </span>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-bone-faint">{c.label}</p>
                       {c.href ? (
-                        <a href={c.href} className="text-sm font-medium text-bone hover:text-amber">
+                        <a href={c.href} className="text-sm font-medium text-bone hover:text-accent">
                           {c.value}
                         </a>
                       ) : (
@@ -80,7 +80,7 @@ export default function ContactPage() {
 
             <Reveal delay={0.1}>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-amber">
+                <p className="text-xs font-semibold uppercase tracking-wider text-accent">
                   Zone d'intervention — Bouches-du-Rhône
                 </p>
                 <div className="mt-4">

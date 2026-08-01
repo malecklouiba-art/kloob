@@ -26,7 +26,7 @@ function StatItem({ value, suffix = "", label }: StatItemProps) {
 
   return (
     <div className="text-center sm:text-left">
-      <p className="font-display text-display-1 font-bold tabular-nums text-amber">
+      <p className="font-display text-display-1 font-bold tabular-nums text-accent">
         <span ref={ref}>{display}</span>
         {suffix}
       </p>

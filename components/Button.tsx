@@ -14,12 +14,12 @@ interface BaseProps {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-amber text-ink-950 hover:bg-amber-400 shadow-amber-glow hover:shadow-amber-glow active:scale-[0.98]",
+    "bg-accent text-ink-950 hover:bg-accent-400 shadow-accent-glow hover:shadow-accent-glow active:scale-[0.98]",
   secondary:
-    "bg-transparent text-bone border border-bone/25 hover:border-amber/60 hover:text-amber active:scale-[0.98]",
+    "bg-transparent text-bone border border-bone/25 hover:border-accent/60 hover:text-accent active:scale-[0.98]",
   ghost: "bg-white/5 text-bone hover:bg-white/10 active:scale-[0.98]",
   emergency:
-    "bg-ink-800 text-amber border border-amber/40 hover:bg-ink-700 hover:border-amber active:scale-[0.98]",
+    "bg-ink-800 text-accent border border-accent/40 hover:bg-ink-700 hover:border-accent active:scale-[0.98]",
 };
 
 const sizeClasses = {

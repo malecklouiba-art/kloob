@@ -17,7 +17,7 @@ export function Hero() {
         aria-hidden="true"
       />
       <div
-        className="absolute -right-40 top-1/4 h-[520px] w-[520px] rounded-full bg-amber/10 blur-[140px]"
+        className="absolute -right-40 top-1/4 h-[520px] w-[520px] rounded-full bg-accent/10 blur-[140px]"
         aria-hidden="true"
       />
 
@@ -26,9 +26,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber"
+          className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-amber" />
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           Agréé CNAPS · Bouches-du-Rhône
         </motion.div>
 
@@ -80,7 +80,7 @@ export function Hero() {
         aria-hidden="true"
       >
         <span className="text-[11px] font-medium uppercase tracking-wider text-bone-faint">Défiler</span>
-        <span className="h-9 w-px bg-gradient-to-b from-amber/60 to-transparent" />
+        <span className="h-9 w-px bg-gradient-to-b from-accent/60 to-transparent" />
       </motion.div>
     </section>
   );

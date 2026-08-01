@@ -6,7 +6,7 @@ Site vitrine de la société de sécurité privée Elvez, agréée CNAPS, interv
 ## Stack
 
 - Next.js 14 (App Router) · TypeScript
-- Tailwind CSS avec design tokens dédiés (palette sombre + accent ambre)
+- Tailwind CSS avec design tokens dédiés (palette sombre + accent bleu électrique)
 - Framer Motion (micro-interactions au scroll)
 - Lucide (icônes)
 
@@ -36,7 +36,7 @@ Ouvre <http://localhost:3000>.
 
 ## Design tokens
 
-Définis dans `tailwind.config.ts` (couleurs `ink`/`bone`/`amber`, typographies `display`/`body`, échelle de
+Définis dans `tailwind.config.ts` (couleurs `ink`/`bone`/`accent`, typographies `display`/`body`, échelle de
 titres `hero`/`display-1..3`) et dans `app/globals.css` (utilitaires `container-elvez`, `glass-panel`, `bg-noise`).
 
 ## Composants

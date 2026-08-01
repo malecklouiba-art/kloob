@@ -41,7 +41,7 @@ export function Navbar() {
     >
       <nav className="container-elvez flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-bone">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xs bg-amber text-ink-950">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xs bg-accent text-ink-950">
             <ShieldCheck size={20} strokeWidth={2} aria-hidden="true" />
           </span>
           Elvez
@@ -77,7 +77,7 @@ export function Navbar() {
                         href={`/services/${slug}`}
                         className="flex items-start gap-3 rounded-sm px-3 py-3 transition-colors duration-150 hover:bg-white/5"
                       >
-                        <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xs bg-amber/10 text-amber">
+                        <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xs bg-accent/10 text-accent">
                           <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
                         </span>
                         <span>
@@ -106,14 +106,14 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href={`tel:${PHONE_EMERGENCY.replace(/\s/g, "")}`}
-            className="flex items-center gap-2 text-sm font-medium text-bone-muted transition-colors duration-200 hover:text-amber"
+            className="flex items-center gap-2 text-sm font-medium text-bone-muted transition-colors duration-200 hover:text-accent"
           >
             <PhoneCall size={16} aria-hidden="true" />
             {PHONE_EMERGENCY}
           </Link>
           <Link
             href="/contact"
-            className="rounded-sm bg-amber px-5 py-2.5 text-sm font-semibold text-ink-950 shadow-amber-glow transition-all duration-200 hover:bg-amber-400"
+            className="rounded-sm bg-accent px-5 py-2.5 text-sm font-semibold text-ink-950 shadow-accent-glow transition-all duration-200 hover:bg-accent-400"
           >
             Devis rapide
           </Link>
@@ -148,7 +148,7 @@ export function Navbar() {
                   href={`/services/${slug}`}
                   className="flex items-center gap-3 rounded-sm px-3 py-3 text-sm font-medium text-bone hover:bg-white/5"
                 >
-                  <Icon size={18} className="text-amber" aria-hidden="true" />
+                  <Icon size={18} className="text-accent" aria-hidden="true" />
                   {title}
                 </Link>
               ))}
@@ -164,13 +164,13 @@ export function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="mt-3 flex items-center justify-center rounded-sm bg-amber px-5 py-3 text-sm font-semibold text-ink-950"
+                className="mt-3 flex items-center justify-center rounded-sm bg-accent px-5 py-3 text-sm font-semibold text-ink-950"
               >
                 Devis rapide
               </Link>
               <Link
                 href={`tel:${PHONE_EMERGENCY.replace(/\s/g, "")}`}
-                className="flex items-center justify-center gap-2 rounded-sm border border-amber/30 px-5 py-3 text-sm font-semibold text-amber"
+                className="flex items-center justify-center gap-2 rounded-sm border border-accent/30 px-5 py-3 text-sm font-semibold text-accent"
               >
                 <PhoneCall size={16} aria-hidden="true" />
                 Urgence 24/7

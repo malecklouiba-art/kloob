@@ -34,7 +34,7 @@ export function StickyCTA() {
         >
           <Link
             href={`tel:${PHONE_EMERGENCY.replace(/\s/g, "")}`}
-            className="flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-3 text-sm font-semibold text-ink-950 shadow-amber-glow transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink-950 shadow-accent-glow transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <PhoneCall size={17} aria-hidden="true" />
             Urgence 24/7 — {PHONE_EMERGENCY}
